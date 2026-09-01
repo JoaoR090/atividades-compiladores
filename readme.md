@@ -1,76 +1,36 @@
-# Nome do Projeto
+# Atividades de Compiladores
 
-Descrição breve do projeto e do seu objetivo.
+Repositório destinado às atividades desenvolvidas na disciplina de **Compiladores**.
 
-## 📋 Sobre
+## Atividades
 
-Este projeto foi desenvolvido para [descrever brevemente a finalidade do projeto].
+### Atividade 1 — Linguagem TPP
 
-## 🚀 Instalação
+Implementação de um **algoritmo de teste para a linguagem TPP**, utilizado para exercitar os conceitos iniciais relacionados à disciplina de Compiladores.
 
-Clone o repositório:
+### Atividade 2 — Expressões Regulares: E-mails
 
-```bash
-git clone https://github.com/usuario/projeto.git
-cd projeto
-```
+Desenvolvimento de programas em **C e C++** utilizando **Expressões Regulares** para recuperar, a partir do arquivo `e-mails.txt`, a lista de e-mails dos alunos da turma.
 
-Instale as dependências:
+### Atividade 3 — Expressões Regulares: HTML
 
-```bash
-# Exemplo
-npm install
-```
+Desenvolvimento de programas em **C e C++** utilizando **Expressões Regulares** para localizar e recuperar o conteúdo de uma **tag HTML escolhida pelo usuário**.
 
-## ▶️ Uso
+### Atividade 4 — Syntax Highlight
 
-Execute o projeto:
+Desenvolvimento de uma extensão para o **Visual Studio Code** responsável por realizar **syntax highlighting** (realce de sintaxe).
 
-```bash
-# Exemplo
-npm start
-```
+A extensão foi compilada e empacotada utilizando o **VSCE (Visual Studio Code Extension Manager)**.
 
-Depois, acesse:
+## Tecnologias
 
-```text
-http://localhost:3000
-```
+- C
+- C++
+- Expressões Regulares (Regex)
+- HTML
+- Visual Studio Code
+- VSCE
 
-## ⚙️ Configuração
+## Estrutura
 
-Caso necessário, configure as variáveis de ambiente no arquivo `.env`:
-
-```env
-EXEMPLO=valor
-```
-
-## 📁 Estrutura
-
-```text
-projeto/
-├── src/
-├── tests/
-├── README.md
-└── package.json
-```
-
-## 🧪 Testes
-
-Para executar os testes:
-
-```bash
-# Exemplo
-npm test
-```
-
-## 📄 Licença
-
-Este projeto está sob a licença [MIT](LICENSE).
-
-## 👤 Autor
-
-**Seu Nome**
-
-- GitHub: https://github.com/usuario
-- E-mail: [seu@email.com](mailto:seu@email.com)
+Cada atividade está organizada em seu respectivo diretório dentro do repositório.
