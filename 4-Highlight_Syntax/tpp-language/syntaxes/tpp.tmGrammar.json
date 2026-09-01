@@ -1,0 +1,108 @@
+{
+  "scopeName": "source.tpp",
+  "patterns": [
+    {
+      "include": "#palavras_especiais"
+    },
+
+    {
+      "include": "#tipos"
+    },
+
+    {
+      "include": "#comparadores"
+    },
+
+    {
+      "include": "#sinais_lógicos"
+    },
+
+    {
+      "include": "#parenteses_colchetes"
+    },
+
+    {
+      "include": "#atribuição"
+    },
+
+    {
+      "include": "#operadores"
+    },
+
+    {
+      "include": "#numeros"
+    }
+  ],
+  "repository": {
+    "palavras_especiais": {
+      "patterns": [
+        {
+          "name": "keyword.control.tpp",
+          "match": "\\b(se|então|fim|repita|até|retorna)\\b"
+        }
+      ]
+    },
+
+    "tipos": {
+      "patterns": [
+        {
+          "name": "storage.type.tpp",
+          "match": "(inteiro|flutuante):"
+        }
+      ]
+    },
+
+    "comparadores": {
+      "patterns": [
+        {
+          "name": "keyword.operator.comparison.tpp",
+          "match": "(<>|<=|>=|<|>|=)"
+        }
+      ]
+    },
+
+    "sinais_lógicos": {
+      "patterns": [
+        {
+          "name": "keyword.operator.logical.tpp",
+          "match": "(\\|\\||&&|!)"
+        }
+      ]
+    },
+
+    "parenteses_colchetes": {
+      "patterns": [
+        {
+          "name": "punctuation.bracket.tpp",
+          "match": "(\\(|\\)|\\[|\\])"
+        }
+      ]
+    },
+
+    "atribuição": {
+      "patterns": [
+        {
+          "name": "keyword.operator.assignment.tpp",
+          "match": ":="
+        }
+      ]
+    },
+
+    "operadores": {
+      "patterns": [
+        {
+          "name": "constant.numeric.tpp",
+          "match": "(\\+|\\*|/|-)"
+        }
+      ]
+    },
+
+    "numeros": {
+      "patterns": [
+        {
+          "match": "[0-9]+\\.?[0-9]*([eE][+-]?[0-9]+)?"
+        }
+      ]
+    }
+  }
+}
