@@ -1,0 +1,35 @@
+{
+  "name": "tpp-language",
+  "displayName": "TppLanguage",
+  "description": "Syntax highlight para TppLanguage (trabalho para a disciplina de Compiladores)",
+  "version": "0.0.1",
+  "publisher": "joaozulato",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "tpplanguage",
+        "aliases": [
+          "TppLanguage",
+          "tpplanguage",
+          "TPP",
+          "Tpp",
+          "tpp"
+        ],
+        "extensions": [
+          ".tpp"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "tpplanguage",
+        "scopeName": "source.tpp",
+        "path": "./syntaxes/tpp.tmGrammar.json"
+      }
+    ]
+  }
+}
