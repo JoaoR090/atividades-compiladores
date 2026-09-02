@@ -1,7 +1,8 @@
 GUIA DE USO — ATIVIDADES DE COMPILADORES
 =========================================
 
-Primeiro clone o repositório https://github.com/JoaoR090/atividades-compiladores.git
+Primeiro clone o repositório:
+git clone https://github.com/JoaoR090/atividades-compiladores.git
 
 Este arquivo contém as instruções para executar cada uma das atividades
 presentes neste repositório.
