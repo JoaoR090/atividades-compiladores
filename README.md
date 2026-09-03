@@ -27,7 +27,7 @@ cd atividades-compiladores
 **Localização:**
 
 ```text
-atividades/1-Algoritmo_tpp/
+1-Algoritmo_tpp/
 ```
 
 **Arquivo principal:**
@@ -48,12 +48,6 @@ codigo_para_teste.tpp
 
 contém um exemplo de código escrito em TPP que pode ser utilizado como entrada nos testes da atividade.
 
-### Exemplo
-
-```text
-codigo_para_teste.tpp
-```
-
 ---
 
 # Atividade 2 — Extração de E-mails
@@ -61,7 +55,7 @@ codigo_para_teste.tpp
 **Localização:**
 
 ```text
-atividades/2-Extração_de_emails/
+2-Extração_de_emails/
 ```
 
 **Arquivos:**
@@ -98,7 +92,7 @@ emails.txt
 Primeiro, entre no diretório da atividade:
 
 ```bash
-cd atividades/2-Extração_de_emails/
+cd 2-Extração_de_emails/
 ```
 
 Compile o programa:
@@ -180,7 +174,7 @@ O programa receberá o arquivo como argumento e procurará os endereços de e-ma
 ### Compilação e execução completas
 
 ```bash
-cd atividades/2-Extração_de_emails/
+cd 2-Extração_de_emails/
 
 g++ pegue_email.cpp -o pegue_email_cpp
 
@@ -194,7 +188,7 @@ g++ pegue_email.cpp -o pegue_email_cpp
 **Localização:**
 
 ```text
-atividades/3-Extracao_tag_html/
+3-Extracao_tag_html/
 ```
 
 **Arquivos:**
@@ -219,7 +213,7 @@ O usuário informa:
 Entre no diretório da atividade:
 
 ```bash
-cd atividades/3-Extracao_tag_html/
+cd 3-Extracao_tag_html/
 ```
 
 Compile o programa:
@@ -296,7 +290,7 @@ Nesse caso, o programa irá procurar as tags `<p>` dentro de `meu_arquivo.html`.
 **Localização:**
 
 ```text
-atividades/4-Highlight_Syntax/
+4-Highlight_Syntax/
 ```
 
 ### Descrição
@@ -395,27 +389,28 @@ De forma geral, o repositório está organizado da seguinte maneira:
 ```text
 atividades-compiladores/
 │
-├── atividades/
+├── 1-Algoritmo_tpp/
+│  └── codigo_para_teste.tpp
+│
+├── 2-Extracao_de_emails/
+│  ├── emails.txt
+│  ├── pegue_email.c
+│  └── pegue_email.cpp
+│
+├── 3-Extracao_tag_html/
+│  ├── pegue_tag.cpp
+│  └── teste_html.html
+│
+├── 4-Highlight_Syntax/
+│   ├── tpp-language/
+│   │   ├── syntaxes/
+│   │   │   └── tpp.tmGrammar.json
+│   │   │
+│   │   ├── language-configuration.json
+│   │   ├── package.json
+│   │   └── tpp-language-0.0.1.vsix
 │   │
-│   ├── 1-Algoritmo_tpp/
-│   │   └── codigo_para_teste.tpp
-│   │
-│   ├── 2-Extração_de_emails/
-│   │   ├── emails.txt
-│   │   ├── pegue_email.c
-│   │   └── pegue_email.cpp
-│   │
-│   ├── 3-Extracao_tag_html/
-│   │   ├── pegue_tag.cpp
-│   │   └── teste_html.html
-│   │
-│   └── 4-Highlight_Syntax/
-│       ├── tpp-language/
-│       │   ├── syntaxes/
-│       │   ├── language-configuration.json
-│       │   └── package.json
-│       │
-│       └── tpp-language-0.0.1.vsix
+│   └── codigo_para_teste.tpp
 │
 └── README.md
 ```
