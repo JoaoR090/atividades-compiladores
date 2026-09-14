@@ -2,7 +2,7 @@
 
 Repositório destinado às atividades desenvolvidas na disciplina de **Compiladores**.
 
-O projeto reúne atividades envolvendo a linguagem **TPP**, **Expressões Regulares (Regex)**, processamento de arquivos, análise de conteúdo HTML, **análise léxica**, desenvolvimento de uma extensão para **Visual Studio Code** e exercícios relacionados a expressões regulares.
+O projeto reúne atividades envolvendo a linguagem **TPP**, **Expressões Regulares (Regex)**, processamento de arquivos, análise de conteúdo HTML, **análise léxica**, desenvolvimento de uma extensão para **Visual Studio Code** e utilização da biblioteca **PLY (Python Lex-Yacc)**.
 
 ---
 
@@ -164,7 +164,7 @@ Após a compilação, o executável estará disponível em:
 3-Extracao_tag_html/pegue_tag_cpp
 ```
 
-Formato:
+O formato de execução é:
 
 ```bash
 ./3-Extracao_tag_html/pegue_tag_cpp arquivo tag
@@ -178,13 +178,15 @@ Para procurar o conteúdo das tags `<p>` no arquivo `teste_html.html`:
 ./3-Extracao_tag_html/pegue_tag_cpp 3-Extracao_tag_html/teste_html.html p
 ```
 
-O programa irá procurar estruturas como:
+Nesse exemplo, o programa irá procurar estruturas como:
 
 ```html
 <p>Conteúdo da tag</p>
 ```
 
 e recuperar o conteúdo correspondente.
+
+### Outro exemplo
 
 Para procurar tags `<h1>`:
 
@@ -237,7 +239,7 @@ Nesse caso, o programa irá procurar as tags `<p>` dentro de `meu_arquivo.html`.
 
 Esta atividade consiste no desenvolvimento de uma extensão para o **Visual Studio Code** responsável por adicionar **syntax highlighting** para a linguagem TPP.
 
-A extensão utiliza a estrutura de extensões do Visual Studio Code e possui uma versão empacotada no formato `.vsix`.
+A extensão foi desenvolvida utilizando a estrutura de extensões do Visual Studio Code e possui uma versão empacotada no formato `.vsix`.
 
 ### Estrutura da extensão
 
@@ -312,7 +314,7 @@ A compilação é realizada automaticamente através do **Makefile**.
 
 ### Execução
 
-A partir da raiz do projeto:
+A partir da raiz do projeto, primeiro execute:
 
 ```bash
 make
@@ -328,7 +330,7 @@ Os argumentos adicionais dependem da implementação do analisador léxico.
 
 ---
 
-# Atividade 6 — Análise Léxica / Expressões Regulares
+# Atividade 6 — Analisador Léxico com PLY
 
 **Localização:**
 
@@ -345,15 +347,72 @@ expresão_regulares.txt
 
 ### Descrição
 
-Esta atividade contém os arquivos relacionados ao exercício de **análise léxica** e **expressões regulares**.
+Esta atividade consiste na alteração do exemplo de **Analisador Léxico** de uma calculadora básica apresentado na documentação da biblioteca **PLY (Python Lex-Yacc)**.
 
-O arquivo:
+O objetivo é modificar o arquivo `calclex.py` do exemplo **Lex Example** para permitir, além das operações aritméticas, a utilização de **operações lógicas**.
+
+As operações lógicas adicionadas são:
+
+- **AND:** `&&`
+- **OR:** `||`
+- **NOT:** `!`
+
+Além disso, é necessário implementar o reconhecimento de **identificadores**, permitindo sua utilização tanto em expressões lógicas quanto em expressões aritméticas.
+
+Por exemplo:
 
 ```text
-calclex.py
+a && b
 ```
 
-contém a implementação em Python.
+ou:
+
+```text
+a + b
+```
+
+Os identificadores são necessários para que expressões contendo variáveis possam ser reconhecidas pelo analisador léxico.
+
+### Operações suportadas
+
+#### Operações aritméticas
+
+A atividade mantém as operações aritméticas presentes no exemplo original da calculadora do PLY.
+
+#### Operações lógicas
+
+Foram adicionados os seguintes operadores:
+
+| Operação | Operador |
+| -------- | -------- | --- | --- |
+| AND      | `&&`     |
+| OR       | `        |     | `   |
+| NOT      | `!`      |
+
+### Identificadores
+
+O analisador também deve reconhecer identificadores.
+
+Exemplos:
+
+```text
+a
+b
+x
+valor
+resultado
+```
+
+Assim, expressões como as seguintes podem ser reconhecidas:
+
+```text
+a + b
+a && b
+a || b
+!a
+```
+
+### Arquivo de expressões regulares
 
 O arquivo:
 
@@ -361,15 +420,19 @@ O arquivo:
 expresão_regulares.txt
 ```
 
-contém as expressões regulares utilizadas na atividade.
+contém as expressões regulares utilizadas como parte da atividade.
 
 ### Execução
 
-O programa pode ser executado diretamente com Python:
+O programa pode ser executado diretamente utilizando Python:
 
 ```bash
 python3 6-Análise_Léxica/calclex.py
 ```
+
+### Referência
+
+A atividade é baseada na documentação do **PLY**, especificamente no exemplo de **Lex Example** e na seção referente à implementação de um analisador léxico para uma calculadora básica.
 
 ---
 
@@ -385,7 +448,31 @@ make
 
 O Makefile automatiza a compilação das implementações compiláveis das atividades.
 
-Para remover os arquivos gerados:
+As atividades que possuem implementação em C/C++ e são compiladas pelo Makefile incluem:
+
+- Atividade 2 — Extração de E-mails;
+- Atividade 3 — Extração de Tags HTML;
+- Atividade 5 — Análise Léxica Automoto.
+
+A Atividade 6 é executada diretamente com Python e não depende do Makefile.
+
+### Compilação incremental
+
+O Makefile permite realizar **compilação incremental**.
+
+Ao executar:
+
+```bash
+make
+```
+
+novamente, o `make` verifica quais arquivos foram modificados e recompila somente os arquivos necessários.
+
+Isso evita a necessidade de recompilar manualmente todo o projeto após cada alteração.
+
+### Limpando os arquivos gerados
+
+Para remover os arquivos objeto e os executáveis gerados pelo Makefile:
 
 ```bash
 make clean
@@ -405,6 +492,7 @@ make
 - **C++**
 - **C++17**
 - **Python**
+- **PLY (Python Lex-Yacc)**
 - **Make / Makefile**
 - **GCC**
 - **Expressões Regulares (Regex)**
@@ -531,7 +619,7 @@ Extensions → ... → Install from VSIX...
 ./5-Análise_Léxica_Automoto/Analisador_Léxico_cpp
 ```
 
-## Atividade 6 — Análise Léxica / Regex
+## Atividade 6 — Analisador Léxico com PLY
 
 ```bash
 python3 6-Análise_Léxica/calclex.py
@@ -582,7 +670,7 @@ Depois da compilação, os programas podem ser executados individualmente.
 ./5-Análise_Léxica_Automoto/Analisador_Léxico_cpp
 ```
 
-### Atividade 6
+### Analisador Léxico com PLY
 
 ```bash
 python3 6-Análise_Léxica/calclex.py
@@ -605,10 +693,14 @@ make clean
 - A **Atividade 4** possui uma versão compilada da extensão no formato `.vsix`, portanto não é necessário recompilá-la para utilizá-la.
 - Na **Atividade 2**, o arquivo informado como argumento será utilizado para procurar endereços de e-mail.
 - Na **Atividade 3**, a tag deve ser informada sem os caracteres `<` e `>`.
-- A **Atividade 5** contém a implementação de um analisador léxico em C++.
-- A **Atividade 6** contém uma implementação em Python e um arquivo com expressões regulares.
+- A **Atividade 5** contém a implementação de um analisador léxico em C++ para a linguagem TPP.
+- A **Atividade 6** utiliza Python e a biblioteca **PLY** para implementar um analisador léxico baseado no exemplo de uma calculadora básica.
+- A **Atividade 6** adiciona ao analisador o reconhecimento dos operadores lógicos `&&`, `||` e `!`.
+- A **Atividade 6** também adiciona o reconhecimento de identificadores para permitir expressões como `a && b` e `a + b`.
+- O arquivo `expresão_regulares.txt` contém as expressões regulares utilizadas na Atividade 6.
 - Os arquivos C++ são compilados utilizando o padrão **C++17**.
 - O Makefile utiliza as opções `-Wall -Wextra` para habilitar avisos durante a compilação.
 - É necessário possuir `make`, `gcc` e `g++` instalados no sistema.
+- Para executar a Atividade 6, é necessário possuir Python 3 e a biblioteca PLY instalada.
 - Os arquivos de entrada devem ser informados corretamente durante a execução dos programas.
-- O arquivo do **JFLAP (`Automoto_Análise_Léxica.jff`) foi omitido da documentação**, conforme solicitado.
+- O arquivo do **JFLAP (`Automoto_Análise_Léxica.jff`) foi omitido da documentação**.
