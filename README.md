@@ -269,7 +269,7 @@ Install from VSIX...
 5. Selecione o arquivo:
 
 ```text
-4-Highlight_Syntax/tpp-language/tpp-language-0.0.1.vsix
+4-Highlight_Syntax/tpp-language-0.0.1.vsix
 ```
 
 6. Abra um arquivo com a extensão:
@@ -282,12 +282,12 @@ A extensão deverá reconhecer a linguagem TPP e aplicar o **syntax highlighting
 
 ---
 
-# Atividade 5 — Análise Léxica
+# Atividade 5 — Análise Léxica Automoto
 
 **Localização:**
 
 ```text
-5-Análise_Léxica/
+5-Análise_Léxica_Automoto/
 ```
 
 **Arquivo principal:**
@@ -310,8 +310,6 @@ Analisador_Léxico.cpp
 
 A compilação é realizada automaticamente através do **Makefile**.
 
-> O arquivo `Automoto_Análise_Léxica.jff` não faz parte da documentação desta atividade.
-
 ### Execução
 
 A partir da raiz do projeto:
@@ -323,7 +321,7 @@ make
 Depois, o programa poderá ser executado através de:
 
 ```bash
-./5-Análise_Léxica/Analisador_Léxico_cpp
+./5-Análise_Léxica_Automoto/Analisador_Léxico_cpp
 ```
 
 Os argumentos adicionais dependem da implementação do analisador léxico.
@@ -446,7 +444,7 @@ atividades-compiladores/
 │   ├── tpp-language-0.0.1.vsix
 │   └── codigo_para_teste.tpp
 │
-├── 5-Análise_Léxica/
+├── 5-Análise_Léxica_Automoto/
 │   └── Analisador_Léxico.cpp
 │
 ├── 6-Análise_Léxica/
@@ -527,10 +525,10 @@ através da opção:
 Extensions → ... → Install from VSIX...
 ```
 
-## Atividade 5 — Análise Léxica
+## Atividade 5 — Análise Léxica Automoto
 
 ```bash
-./5-Análise_Léxica/Analisador_Léxico_cpp
+./5-Análise_Léxica_Automoto/Analisador_Léxico_cpp
 ```
 
 ## Atividade 6 — Análise Léxica / Regex
@@ -578,10 +576,10 @@ Depois da compilação, os programas podem ser executados individualmente.
 ./3-Extracao_tag_html/pegue_tag_cpp 3-Extracao_tag_html/teste_html.html p
 ```
 
-### Análise Léxica
+### Análise Léxica Automoto
 
 ```bash
-./5-Análise_Léxica/Analisador_Léxico_cpp
+./5-Análise_Léxica_Automoto/Analisador_Léxico_cpp
 ```
 
 ### Atividade 6
