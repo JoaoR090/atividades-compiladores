@@ -422,14 +422,6 @@ expresão_regulares.txt
 
 contém as expressões regulares utilizadas como parte da atividade.
 
-### Execução
-
-O programa pode ser executado diretamente utilizando Python:
-
-```bash
-python3 6-Análise_Léxica/calclex.py
-```
-
 ### Referência
 
 A atividade é baseada na documentação do **PLY**, especificamente no exemplo de **Lex Example** e na seção referente à implementação de um analisador léxico para uma calculadora básica.
@@ -453,8 +445,6 @@ As atividades que possuem implementação em C/C++ e são compiladas pelo Makefi
 - Atividade 2 — Extração de E-mails;
 - Atividade 3 — Extração de Tags HTML;
 - Atividade 5 — Análise Léxica Automoto.
-
-A Atividade 6 é executada diretamente com Python e não depende do Makefile.
 
 ### Compilação incremental
 
@@ -619,18 +609,6 @@ Extensions → ... → Install from VSIX...
 ./5-Análise_Léxica_Automoto/Analisador_Léxico_cpp
 ```
 
-## Atividade 6 — Analisador Léxico com PLY
-
-```bash
-python3 6-Análise_Léxica/calclex.py
-```
-
-## Limpar a compilação
-
-```bash
-make clean
-```
-
 ---
 
 # Fluxo recomendado
@@ -670,12 +648,6 @@ Depois da compilação, os programas podem ser executados individualmente.
 ./5-Análise_Léxica_Automoto/Analisador_Léxico_cpp
 ```
 
-### Analisador Léxico com PLY
-
-```bash
-python3 6-Análise_Léxica/calclex.py
-```
-
 Para remover os arquivos gerados:
 
 ```bash
@@ -696,8 +668,6 @@ make clean
 - A **Atividade 5** contém a implementação de um analisador léxico em C++ para a linguagem TPP.
 - A **Atividade 6** utiliza Python e a biblioteca **PLY** para implementar um analisador léxico baseado no exemplo de uma calculadora básica.
 - A **Atividade 6** adiciona ao analisador o reconhecimento dos operadores lógicos `&&`, `||` e `!`.
-- A **Atividade 6** também adiciona o reconhecimento de identificadores para permitir expressões como `a && b` e `a + b`.
-- O arquivo `expresão_regulares.txt` contém as expressões regulares utilizadas na Atividade 6.
 - Os arquivos C++ são compilados utilizando o padrão **C++17**.
 - O Makefile utiliza as opções `-Wall -Wextra` para habilitar avisos durante a compilação.
 - É necessário possuir `make`, `gcc` e `g++` instalados no sistema.
