@@ -1,0 +1,36 @@
+r'\+'                       MAIS
+r'-'                        MENOS
+r'\*'                       VEZES
+r'/'                        DIVIDE
+r':'                        DOIS_PONTOS
+r','                        VIRGULA
+r'<'                        MENOR
+r'>'                        MAIOR
+r'='                        IGUAL
+r'<>'                       DIFERENTE
+r'<='                       MENOR_IGUAL
+r'>='                       MAIOR_IGUAL
+r'&&'                       E
+r'||'                       OU
+r'!'                        NAO
+r'\('                       ABRE_PARENTESE
+r'\)'                       FECHA_PARENTESE
+r'\['                       ABRE_COLCHETE
+r'\]'                       FECHA_COLCHETE
+r'se'                       SE
+r'então'                    ENTAO
+r'fim'                      FIM
+r'repita'                   REPITA
+r'até'                      ATE
+r':='                       ATRIBUICAO
+r'leia'                     LEIA
+r'escreva'                  ESCREVA
+r'retorna'                  RETORNA
+r'inteiro'                  INTEIRO
+r'flutuante'                FLUTUANTE
+r'\d+'                      NUM_INTEIRO
+r'\d+\.?\d*'                NUM_PONTO_FLUTUANTE
+r'\d+\.?\d*e(+|-)?\d+'      NUM_NOTACAO_CIENTIFICA
+r'[a-zA-Z_][a-zA-Z0-9_]*'   IDENTIFICADOR
+
+
