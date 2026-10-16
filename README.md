@@ -11,8 +11,11 @@ O projeto reúne atividades envolvendo a linguagem **TPP**, **Expressões Regula
 Para obter o projeto, clone o repositório:
 
 ```bash
+
 git clone https://github.com/JoaoR090/atividades-compiladores.git
+
 cd atividades-compiladores
+
 ```
 
 ---
@@ -24,13 +27,17 @@ cd atividades-compiladores
 **Localização:**
 
 ```text
+
 1-Algoritmo_tpp/
+
 ```
 
 **Arquivo:**
 
 ```text
+
 codigo_para_teste.tpp
+
 ```
 
 ### Descrição
@@ -46,15 +53,21 @@ O arquivo `codigo_para_teste.tpp` contém um exemplo de código escrito em TPP q
 **Localização:**
 
 ```text
+
 2-Extracao_de_emails/
+
 ```
 
 **Arquivos:**
 
 ```text
+
 emails.txt
+
 pegue_email.c
+
 pegue_email.cpp
+
 ```
 
 ### Descrição
@@ -64,6 +77,7 @@ Nesta atividade foram desenvolvidos programas para localizar e recuperar endere�
 Existem duas implementações:
 
 - `pegue_email.c` — implementação em C;
+
 - `pegue_email.cpp` — implementação em C++.
 
 O arquivo `emails.txt` é utilizado como exemplo de entrada.
@@ -75,25 +89,33 @@ Também é possível utilizar outros arquivos de texto contendo os dados que dev
 Após executar:
 
 ```bash
+
 make
+
 ```
 
 o executável da implementação em C estará disponível em:
 
 ```text
+
 2-Extracao_de_emails/pegue_email_c
+
 ```
 
 Para executar utilizando o arquivo de exemplo:
 
 ```bash
+
 ./2-Extracao_de_emails/pegue_email_c 2-Extracao_de_emails/emails.txt
+
 ```
 
 Formato geral:
 
 ```bash
+
 ./2-Extracao_de_emails/pegue_email_c arquivo
+
 ```
 
 ### Execução em C++
@@ -101,25 +123,33 @@ Formato geral:
 Após executar:
 
 ```bash
+
 make
+
 ```
 
 o executável da implementação em C++ estará disponível em:
 
 ```text
+
 2-Extracao_de_emails/pegue_email_cpp
+
 ```
 
 Para executar utilizando o arquivo de exemplo:
 
 ```bash
+
 ./2-Extracao_de_emails/pegue_email_cpp 2-Extracao_de_emails/emails.txt
+
 ```
 
 Formato geral:
 
 ```bash
+
 ./2-Extracao_de_emails/pegue_email_cpp arquivo
+
 ```
 
 ---
@@ -129,14 +159,19 @@ Formato geral:
 **Localização:**
 
 ```text
+
 3-Extracao_tag_html/
+
 ```
 
 **Arquivos:**
 
 ```text
+
 pegue_tag.cpp
+
 teste_html.html
+
 ```
 
 ### Descrição
@@ -145,15 +180,18 @@ Nesta atividade foi desenvolvido um programa em **C++** utilizando **Expressões
 
 O programa recebe como argumentos:
 
-1. O arquivo HTML que será analisado;
-2. A tag HTML que deseja procurar.
+1\. O arquivo HTML que será analisado;
+
+2\. A tag HTML que deseja procurar.
 
 ### Compilação
 
 A partir da raiz do projeto:
 
 ```bash
+
 make
+
 ```
 
 ### Execução
@@ -161,13 +199,17 @@ make
 Após a compilação, o executável estará disponível em:
 
 ```text
+
 3-Extracao_tag_html/pegue_tag_cpp
+
 ```
 
 O formato de execução é:
 
 ```bash
+
 ./3-Extracao_tag_html/pegue_tag_cpp arquivo tag
+
 ```
 
 ### Exemplo
@@ -175,13 +217,17 @@ O formato de execução é:
 Para procurar o conteúdo das tags `<p>` no arquivo `teste_html.html`:
 
 ```bash
+
 ./3-Extracao_tag_html/pegue_tag_cpp 3-Extracao_tag_html/teste_html.html p
+
 ```
 
 Nesse exemplo, o programa irá procurar estruturas como:
 
 ```html
+
 <p>Conteúdo da tag</p>
+
 ```
 
 e recuperar o conteúdo correspondente.
@@ -191,7 +237,9 @@ e recuperar o conteúdo correspondente.
 Para procurar tags `<h1>`:
 
 ```bash
+
 ./3-Extracao_tag_html/pegue_tag_cpp 3-Extracao_tag_html/teste_html.html h1
+
 ```
 
 ### Importante
@@ -201,18 +249,27 @@ A tag deve ser informada **sem os caracteres `<` e `>`**.
 Exemplos corretos:
 
 ```text
+
 p
+
 h1
+
 div
+
 title
+
 ```
 
 Exemplos incorretos:
 
 ```text
+
 <p>
+
 <h1>
+
 <div>
+
 ```
 
 ### Utilizando outro arquivo HTML
@@ -220,7 +277,9 @@ Exemplos incorretos:
 Também é possível analisar outro arquivo:
 
 ```bash
+
 ./3-Extracao_tag_html/pegue_tag_cpp meu_arquivo.html p
+
 ```
 
 Nesse caso, o programa irá procurar as tags `<p>` dentro de `meu_arquivo.html`.
@@ -232,7 +291,9 @@ Nesse caso, o programa irá procurar as tags `<p>` dentro de `meu_arquivo.html`.
 **Localização:**
 
 ```text
+
 4-Highlight_Syntax/
+
 ```
 
 ### Descrição
@@ -244,40 +305,59 @@ A extensão foi desenvolvida utilizando a estrutura de extensões do Visual Stud
 ### Estrutura da extensão
 
 ```text
+
 4-Highlight_Syntax/
+
 ├── tpp-language/
+
 │   ├── syntaxes/
+
 │   │   └── tpp.tmGrammar.json
+
 │   ├── language-configuration.json
+
 │   └── package.json
+
 │
+
 ├── tpp-language-0.0.1.vsix
+
 └── codigo_para_teste.tpp
+
 ```
 
 ### Instalação da extensão
 
 Não é necessário recompilar a extensão para utilizá-la.
 
-1. Abra o **Visual Studio Code**.
-2. Abra a aba de extensões.
-3. Clique no menu representado pelos **três pontos (`...`)**.
-4. Selecione:
+1\. Abra o **Visual Studio Code**.
+
+2\. Abra a aba de extensões.
+
+3\. Clique no menu representado pelos **três pontos (`...`)**.
+
+4\. Selecione:
 
 ```text
+
 Install from VSIX...
+
 ```
 
-5. Selecione o arquivo:
+5\. Selecione o arquivo:
 
 ```text
+
 4-Highlight_Syntax/tpp-language-0.0.1.vsix
+
 ```
 
-6. Abra um arquivo com a extensão:
+6\. Abra um arquivo com a extensão:
 
 ```text
+
 .tpp
+
 ```
 
 A extensão deverá reconhecer a linguagem TPP e aplicar o **syntax highlighting**.
@@ -289,13 +369,17 @@ A extensão deverá reconhecer a linguagem TPP e aplicar o **syntax highlighting
 **Localização:**
 
 ```text
+
 5-Análise_Léxica_Automoto/
+
 ```
 
 **Arquivo principal:**
 
 ```text
+
 Analisador_Léxico.cpp
+
 ```
 
 ### Descrição
@@ -307,7 +391,9 @@ O analisador léxico é responsável por realizar a leitura do código-fonte e i
 A atividade possui a implementação principal em:
 
 ```text
+
 Analisador_Léxico.cpp
+
 ```
 
 A compilação é realizada automaticamente através do **Makefile**.
@@ -317,13 +403,17 @@ A compilação é realizada automaticamente através do **Makefile**.
 A partir da raiz do projeto, primeiro execute:
 
 ```bash
+
 make
+
 ```
 
 Depois, o programa poderá ser executado através de:
 
 ```bash
+
 ./5-Análise_Léxica_Automoto/Analisador_Léxico_cpp
+
 ```
 
 Os argumentos adicionais dependem da implementação do analisador léxico.
@@ -335,14 +425,19 @@ Os argumentos adicionais dependem da implementação do analisador léxico.
 **Localização:**
 
 ```text
+
 6-Análise_Léxica/
+
 ```
 
 **Arquivos:**
 
 ```text
+
 calclex.py
+
 expresão_regulares.txt
+
 ```
 
 ### Descrição
@@ -354,7 +449,9 @@ O objetivo é modificar o arquivo `calclex.py` do exemplo **Lex Example** para p
 As operações lógicas adicionadas são:
 
 - **AND:** `&&`
+
 - **OR:** `||`
+
 - **NOT:** `!`
 
 Além disso, é necessário implementar o reconhecimento de **identificadores**, permitindo sua utilização tanto em expressões lógicas quanto em expressões aritméticas.
@@ -362,13 +459,17 @@ Além disso, é necessário implementar o reconhecimento de **identificadores**,
 Por exemplo:
 
 ```text
+
 a && b
+
 ```
 
 ou:
 
 ```text
+
 a + b
+
 ```
 
 Os identificadores são necessários para que expressões contendo variáveis possam ser reconhecidas pelo analisador léxico.
@@ -384,9 +485,13 @@ A atividade mantém as operações aritméticas presentes no exemplo original da
 Foram adicionados os seguintes operadores:
 
 | Operação | Operador |
+
 | -------- | -------- | --- | --- |
+
 | AND      | `&&`     |
+
 | OR       | `        |     | `   |
+
 | NOT      | `!`      |
 
 ### Identificadores
@@ -396,20 +501,31 @@ O analisador também deve reconhecer identificadores.
 Exemplos:
 
 ```text
+
 a
+
 b
+
 x
+
 valor
+
 resultado
+
 ```
 
 Assim, expressões como as seguintes podem ser reconhecidas:
 
 ```text
+
 a + b
+
 a && b
+
 a || b
+
 !a
+
 ```
 
 ### Arquivo de expressões regulares
@@ -417,7 +533,9 @@ a || b
 O arquivo:
 
 ```text
+
 expresão_regulares.txt
+
 ```
 
 contém as expressões regulares utilizadas como parte da atividade.
@@ -428,6 +546,38 @@ A atividade é baseada na documentação do **PLY**, especificamente no exemplo 
 
 ---
 
+# Atividade 7 — Análise Léxica dos Compiladores Atuais
+
+**Localização:**
+
+```text
+7-Analisadores_Léxicos_dos_Compiladores_Atuais/
+```
+
+**Arquivo:**
+
+```text
+Atividade7.pdf
+```
+
+### Descrição
+
+Esta atividade consiste em navegar nos repositórios dos projetos de compiladores atuais para verificar como a análise léxica foi implementada. Os projetos investigados são:
+
+- **GCC (GNU Compiler Collection);**
+- **Clang / LLVM;**
+- **Anthropic CCC (Claude’s C Compiler).**
+
+O enunciado e as orientações da atividade estão disponíveis no arquivo `Atividade7.pdf`.
+
+---
+
+# Script de commit
+
+O arquivo `commit.sh` automatiza o início do processo de commit no Git: executa `git add .` para adicionar as alterações do diretório de trabalho à área de preparação e, em seguida, realiza o commit. O uso do script pode depender de como a mensagem de commit é solicitada ou definida no próprio arquivo.
+
+---
+
 # Makefile
 
 O projeto possui um **Makefile** na raiz do repositório para automatizar a compilação dos programas desenvolvidos em **C e C++**.
@@ -435,7 +585,9 @@ O projeto possui um **Makefile** na raiz do repositório para automatizar a comp
 Para compilar os programas:
 
 ```bash
+
 make
+
 ```
 
 O Makefile automatiza a compilação das implementações compiláveis das atividades.
@@ -443,7 +595,9 @@ O Makefile automatiza a compilação das implementações compiláveis das ativi
 As atividades que possuem implementação em C/C++ e são compiladas pelo Makefile incluem:
 
 - Atividade 2 — Extração de E-mails;
+
 - Atividade 3 — Extração de Tags HTML;
+
 - Atividade 5 — Análise Léxica Automoto.
 
 ### Compilação incremental
@@ -453,7 +607,9 @@ O Makefile permite realizar **compilação incremental**.
 Ao executar:
 
 ```bash
+
 make
+
 ```
 
 novamente, o `make` verifica quais arquivos foram modificados e recompila somente os arquivos necessários.
@@ -465,13 +621,17 @@ Isso evita a necessidade de recompilar manualmente todo o projeto após cada alt
 Para remover os arquivos objeto e os executáveis gerados pelo Makefile:
 
 ```bash
+
 make clean
+
 ```
 
 Depois disso, o projeto pode ser compilado novamente utilizando:
 
 ```bash
+
 make
+
 ```
 
 ---
@@ -479,18 +639,31 @@ make
 # Tecnologias utilizadas
 
 - **C**
+
 - **C++**
+
 - **C++17**
+
 - **Python**
+
 - **PLY (Python Lex-Yacc)**
+
 - **Make / Makefile**
+
 - **GCC**
+
 - **Expressões Regulares (Regex)**
+
 - **HTML**
+
 - **TPP**
+
 - **Análise Léxica**
+
 - **Visual Studio Code**
+
 - **VSCE (Visual Studio Code Extension Manager)**
+- **Git e shell script**
 
 ---
 
@@ -529,7 +702,11 @@ atividades-compiladores/
 │   ├── calclex.py
 │   └── expresão_regulares.txt
 │
+├── 7-Analisadores_Léxicos_dos_Compiladores_Atuais/
+│   └── Atividade7.pdf
+│
 ├── .gitignore
+├── commit.sh
 ├── Makefile
 └── README.md
 ```
@@ -541,50 +718,67 @@ atividades-compiladores/
 ## Obter o projeto
 
 ```bash
+
 git clone https://github.com/JoaoR090/atividades-compiladores.git
+
 cd atividades-compiladores
+
 ```
 
 ## Compilar o projeto
 
 ```bash
+
 make
+
 ```
 
 ## Atividade 2 — Extração de E-mails em C
 
 ```bash
+
 ./2-Extracao_de_emails/pegue_email_c 2-Extracao_de_emails/emails.txt
+
 ```
 
 Formato:
 
 ```bash
+
 ./2-Extracao_de_emails/pegue_email_c arquivo
+
 ```
 
 ## Atividade 2 — Extração de E-mails em C++
 
 ```bash
+
 ./2-Extracao_de_emails/pegue_email_cpp 2-Extracao_de_emails/emails.txt
+
 ```
 
 Formato:
 
 ```bash
+
 ./2-Extracao_de_emails/pegue_email_cpp arquivo
+
 ```
 
 ## Atividade 3 — Extração de Tags HTML
 
 ```bash
+
 ./3-Extracao_tag_html/pegue_tag_cpp 3-Extracao_tag_html/teste_html.html p
+
 ```
 
 Formato:
 
 ```bash
+
 ./3-Extracao_tag_html/pegue_tag_cpp arquivo tag
+
 ```
 
 A tag deve ser informada sem `<` e `>`.
@@ -594,20 +788,38 @@ A tag deve ser informada sem `<` e `>`.
 Instalar o arquivo:
 
 ```text
+
 4-Highlight_Syntax/tpp-language-0.0.1.vsix
+
 ```
 
 através da opção:
 
 ```text
+
 Extensions → ... → Install from VSIX...
+
 ```
 
 ## Atividade 5 — Análise Léxica Automoto
 
 ```bash
+
 ./5-Análise_Léxica_Automoto/Analisador_Léxico_cpp
+
 ```
+
+---
+
+## Atividade 7 — Análise Léxica dos Compiladores Atuais
+
+Consulte o enunciado em:
+
+```text
+7-Analisadores_Léxicos_dos_Compiladores_Atuais/Atividade7.pdf
+```
+
+A atividade propõe examinar os repositórios do GCC, Clang/LLVM e Anthropic CCC para entender como a análise léxica é implementada nesses projetos.
 
 ---
 
@@ -616,8 +828,11 @@ Extensions → ... → Install from VSIX...
 Depois de clonar o repositório:
 
 ```bash
+
 cd atividades-compiladores
+
 make
+
 ```
 
 Com isso, os programas compiláveis das atividades serão construídos automaticamente.
@@ -627,31 +842,41 @@ Depois da compilação, os programas podem ser executados individualmente.
 ### Extração de e-mails — C
 
 ```bash
+
 ./2-Extracao_de_emails/pegue_email_c 2-Extracao_de_emails/emails.txt
+
 ```
 
 ### Extração de e-mails — C++
 
 ```bash
+
 ./2-Extracao_de_emails/pegue_email_cpp 2-Extracao_de_emails/emails.txt
+
 ```
 
 ### Extração de tags HTML
 
 ```bash
+
 ./3-Extracao_tag_html/pegue_tag_cpp 3-Extracao_tag_html/teste_html.html p
+
 ```
 
 ### Análise Léxica Automoto
 
 ```bash
+
 ./5-Análise_Léxica_Automoto/Analisador_Léxico_cpp
+
 ```
 
 Para remover os arquivos gerados:
 
 ```bash
+
 make clean
+
 ```
 
 ---
@@ -659,18 +884,33 @@ make clean
 # Observações
 
 - O **Makefile** automatiza a compilação das implementações em C e C++.
+
 - Para compilar o projeto, basta executar `make` na raiz do repositório.
+
 - Não é necessário realizar a compilação manual dos arquivos C ou C++.
+
 - A **Atividade 1** consiste em um arquivo de teste escrito na linguagem TPP e não possui etapa de compilação pelo Makefile.
+
 - A **Atividade 4** possui uma versão compilada da extensão no formato `.vsix`, portanto não é necessário recompilá-la para utilizá-la.
+
 - Na **Atividade 2**, o arquivo informado como argumento será utilizado para procurar endereços de e-mail.
+
 - Na **Atividade 3**, a tag deve ser informada sem os caracteres `<` e `>`.
+
 - A **Atividade 5** contém a implementação de um analisador léxico em C++ para a linguagem TPP.
+
 - A **Atividade 6** utiliza Python e a biblioteca **PLY** para implementar um analisador léxico baseado no exemplo de uma calculadora básica.
+
 - A **Atividade 6** adiciona ao analisador o reconhecimento dos operadores lógicos `&&`, `||` e `!`.
+
 - Os arquivos C++ são compilados utilizando o padrão **C++17**.
+
 - O Makefile utiliza as opções `-Wall -Wextra` para habilitar avisos durante a compilação.
+
 - É necessário possuir `make`, `gcc` e `g++` instalados no sistema.
+
 - Para executar a Atividade 6, é necessário possuir Python 3 e a biblioteca PLY instalada.
+
 - Os arquivos de entrada devem ser informados corretamente durante a execução dos programas.
+
 - O arquivo do **JFLAP (`Automoto_Análise_Léxica.jff`) foi omitido da documentação**.
