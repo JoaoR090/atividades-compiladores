@@ -1,8 +1,6 @@
 # Atividades de Compiladores
 
-Repositório destinado às atividades desenvolvidas na disciplina de **Compiladores**.
-
-O projeto reúne atividades envolvendo a linguagem **TPP**, **Expressões Regulares (Regex)**, processamento de arquivos, análise de conteúdo HTML, **análise léxica**, desenvolvimento de uma extensão para **Visual Studio Code** e utilização da biblioteca **PLY (Python Lex-Yacc)**.
+Repositório com atividades da disciplina de **Compiladores**, incluindo TPP, expressões regulares, processamento de HTML, análise léxica e uso da biblioteca **PLY (Python Lex-Yacc)**.
 
 ---
 
@@ -42,9 +40,7 @@ codigo_para_teste.tpp
 
 ### Descrição
 
-Esta atividade contém um algoritmo escrito na linguagem **TPP**, utilizado como arquivo de teste para os exercícios relacionados à linguagem.
-
-O arquivo `codigo_para_teste.tpp` contém um exemplo de código escrito em TPP que pode ser utilizado como entrada nos testes da atividade.
+Contém um exemplo de algoritmo em **TPP** para uso nos exercícios da disciplina.
 
 ---
 
@@ -572,67 +568,23 @@ O enunciado e as orientações da atividade estão disponíveis no arquivo `Ativ
 
 ---
 
-# Script de commit
+# Atividade 8 — Parser de Calculadora com PLY
 
-O arquivo `commit.sh` automatiza o início do processo de commit no Git: executa `git add .` para adicionar as alterações do diretório de trabalho à área de preparação e, em seguida, realiza o commit. O uso do script pode depender de como a mensagem de commit é solicitada ou definida no próprio arquivo.
+**Localização:**
+
+```text
+8-Calculadora_em_PLY_(Parser)/
+```
+
+**Arquivos:** `calcparser.py` e `calclex.py`.
+
+Com base no exemplo de calculadora da documentação do **PLY**, esta atividade altera o parser do Yacc para aceitar operações lógicas além das aritméticas, utilizando os tokens definidos pelo lexer.
 
 ---
 
 # Makefile
 
-O projeto possui um **Makefile** na raiz do repositório para automatizar a compilação dos programas desenvolvidos em **C e C++**.
-
-Para compilar os programas:
-
-```bash
-
-make
-
-```
-
-O Makefile automatiza a compilação das implementações compiláveis das atividades.
-
-As atividades que possuem implementação em C/C++ e são compiladas pelo Makefile incluem:
-
-- Atividade 2 — Extração de E-mails;
-
-- Atividade 3 — Extração de Tags HTML;
-
-- Atividade 5 — Análise Léxica Automoto.
-
-### Compilação incremental
-
-O Makefile permite realizar **compilação incremental**.
-
-Ao executar:
-
-```bash
-
-make
-
-```
-
-novamente, o `make` verifica quais arquivos foram modificados e recompila somente os arquivos necessários.
-
-Isso evita a necessidade de recompilar manualmente todo o projeto após cada alteração.
-
-### Limpando os arquivos gerados
-
-Para remover os arquivos objeto e os executáveis gerados pelo Makefile:
-
-```bash
-
-make clean
-
-```
-
-Depois disso, o projeto pode ser compilado novamente utilizando:
-
-```bash
-
-make
-
-```
+O **Makefile** da raiz compila as atividades em C e C++ (atividades 2, 3 e 5). Use `make` para compilar e `make clean` para remover os arquivos gerados.
 
 ---
 
@@ -663,7 +615,7 @@ make
 - **Visual Studio Code**
 
 - **VSCE (Visual Studio Code Extension Manager)**
-- **Git e shell script**
+- **Git**
 
 ---
 
@@ -705,8 +657,11 @@ atividades-compiladores/
 ├── 7-Analisadores_Léxicos_dos_Compiladores_Atuais/
 │   └── Atividade7.pdf
 │
+├── 8-Calculadora_em_PLY_(Parser)/
+│   ├── calclex.py
+│   └── calcparser.py
+│
 ├── .gitignore
-├── commit.sh
 ├── Makefile
 └── README.md
 ```
@@ -823,62 +778,6 @@ A atividade propõe examinar os repositórios do GCC, Clang/LLVM e Anthropic CCC
 
 ---
 
-# Fluxo recomendado
-
-Depois de clonar o repositório:
-
-```bash
-
-cd atividades-compiladores
-
-make
-
-```
-
-Com isso, os programas compiláveis das atividades serão construídos automaticamente.
-
-Depois da compilação, os programas podem ser executados individualmente.
-
-### Extração de e-mails — C
-
-```bash
-
-./2-Extracao_de_emails/pegue_email_c 2-Extracao_de_emails/emails.txt
-
-```
-
-### Extração de e-mails — C++
-
-```bash
-
-./2-Extracao_de_emails/pegue_email_cpp 2-Extracao_de_emails/emails.txt
-
-```
-
-### Extração de tags HTML
-
-```bash
-
-./3-Extracao_tag_html/pegue_tag_cpp 3-Extracao_tag_html/teste_html.html p
-
-```
-
-### Análise Léxica Automoto
-
-```bash
-
-./5-Análise_Léxica_Automoto/Analisador_Léxico_cpp
-
-```
-
-Para remover os arquivos gerados:
-
-```bash
-
-make clean
-
-```
-
 ---
 
 # Observações
@@ -902,6 +801,8 @@ make clean
 - A **Atividade 6** utiliza Python e a biblioteca **PLY** para implementar um analisador léxico baseado no exemplo de uma calculadora básica.
 
 - A **Atividade 6** adiciona ao analisador o reconhecimento dos operadores lógicos `&&`, `||` e `!`.
+
+- A **Atividade 8** amplia o parser de calculadora do PLY para reconhecer operações lógicas.
 
 - Os arquivos C++ são compilados utilizando o padrão **C++17**.
 
