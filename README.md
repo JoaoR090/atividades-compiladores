@@ -410,7 +410,7 @@ diagrama_sintatico_grammer.ebnf
 
 ### Descrição
 
-Esta atividade concentra a geração dos diagramas sintáticos da linguagem **TPP** a partir da definição da gramática formal. O objetivo é representar visualmente as regras de produção em forma de diagramas de trilha, facilitando a leitura e a análise da estrutura da linguagem.
+Esta atividade concentra a geração dos diagramas sintáticos da linguagem **TPP** a partir da definição da gramática formal.
 
 Os diagramas podem ser gerados utilizando a definição da gramática disponível em: [Gramática da Linguagem TPP com TOKENS (para a lista de tokens)](https://moodle.utfpr.edu.br/mod/url/view.php?id=1733811)
 
@@ -420,8 +420,6 @@ Como apoio para geração visual, o recurso recomendado foi o [Railroad Diagram 
 
 - `diagrama_sintatico_grammer.ebnf` — definição em EBNF da gramática utilizada para gerar os diagramas;
 - `diagrama-sintática_img.xhtml` — arquivo com os diagramas sintáticos exportados em formato XHTML/SVG.
-
-A estrutura desta atividade é útil para acompanhar visualmente as regras do parser e serve como material complementar para a disciplina de compiladores.
 
 ---
 
