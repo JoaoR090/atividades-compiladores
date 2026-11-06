@@ -423,6 +423,30 @@ Como apoio para geração visual, o recurso recomendado foi o [Railroad Diagram 
 
 ---
 
+# Atividade 10 — Prática de Análise Sintática SLR(1)
+
+**Localização:**
+
+```text
+
+10-Pratica_uso_do_gramophone/
+
+```
+
+### Descrição
+
+Esta atividade aborda a construção de um analisador sintático ascendente para expressões aritméticas e atribuições utilizando o método **SLR(1)**. O material apresenta a construção do autômato de itens LR(0), o uso dos conjuntos FOLLOW e da tabela action-goto para as ações de shift, reduce, goto e accept.
+
+A pasta contém a gramática preparada no **JFLAP**, o relatório da atividade e o material de referência com as instruções da prática.
+
+### Arquivos
+
+- `jflap_at10.jff` — gramática da atividade para uso no JFLAP;
+- `relatorio_at10.pdf` — relatório da atividade;
+- `aula-11-pratica-analise-sintatica-ascendente-lr-0-slr-3.pdf` — material de referência e instruções da prática.
+
+---
+
 # Makefiles
 
 As atividades 2, 3 e 5 têm Makefiles próprios. Execute os comandos abaixo a partir da raiz para compilar cada atividade:
@@ -464,6 +488,7 @@ Para limpar os executáveis, use `make -C <pasta-da-atividade> clean`.
 - **Visual Studio Code**
 
 - **VSCE (Visual Studio Code Extension Manager)**
+- **JFLAP**
 - **Git**
 
 ---
@@ -518,6 +543,11 @@ atividades-compiladores/
 ├── 9-Diagramas_Sintáticos/
 │   ├── diagrama-sintática_img.xhtml
 │   └── diagrama_sintatico_grammer.ebnf
+│
+├── 10-Pratica_uso_do_gramophone/
+│   ├── aula-11-pratica-analise-sintatica-ascendente-lr-0-slr-3.pdf
+│   ├── jflap_at10.jff
+│   └── relatorio_at10.pdf
 │
 ├── .gitignore
 └── README.md
